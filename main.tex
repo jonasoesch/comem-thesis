@@ -73,9 +73,30 @@
 
 \usepackage{longtable} % tables created by pandoc
 
+
 % Continuous footnotes
 \usepackage{chngcntr}
 \counterwithout{footnote}{chapter}
+
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
+
 
 \begin{document}
 
@@ -102,24 +123,10 @@
 
 \setcounter{page}{1} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
 
-\include{frontBack/Titleback} % Back of the title page
-
-%\cleardoublepage\include{frontBack/Dedication} % Dedication page
-%\cleardoublepage\include{frontBack/Foreword} % Uncomment and create a Foreword.tex to include a foreword
-
 \cleardoublepage\include{frontBack/Abstract} % Abstract page
-
-%\cleardoublepage\include{frontBack/Publication} % Publications from the thesis page
-
+\cleardoublepage\include{frontBack/Dedication} % Dedication page
 \cleardoublepage\include{frontBack/Acknowledgments} % Acknowledgements page
-
-%\pagestyle{scrheadings} % Show chapter titles as headings
-
 \cleardoublepage\include{frontBack/Contents} % Contents, list of figures/tables/listings and acronyms
-
-
-
-
 \cleardoublepage % Avoids problems with pdfbookmark
 
 
@@ -146,6 +153,19 @@
 \include{content/Chapter03} % Chapter 3
 \include{content/Chapter04} % Chapter 4 - empty template
 
+\cleardoublepage\include{frontBack/Listings} % Listings page
+
+
+%----------------------------------------------------------------------------------------
+%	POST-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage\include{frontBack/Bibliography} % Bibliography
+
+\cleardoublepage\include{frontBack/Colophon} % Colophon
+
+\cleardoublepage\include{frontBack/Declaration} % Declaration
+
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
@@ -158,16 +178,6 @@
 \include{content/ChapterA1} % Appendix A
 \include{content/ChapterA2} % Appendix A
 %\include{content/Chapter0B} % Appendix B - empty template
-
-%----------------------------------------------------------------------------------------
-%	POST-CONTENT THESIS PAGES
-%----------------------------------------------------------------------------------------
-
-\cleardoublepage\include{frontBack/Bibliography} % Bibliography
-
-\cleardoublepage\include{frontBack/Colophon} % Colophon
-
-\cleardoublepage\include{frontBack/Declaration} % Declaration
 
 %----------------------------------------------------------------------------------------
 

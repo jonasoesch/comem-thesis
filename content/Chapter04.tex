@@ -1,8 +1,8 @@
-\chapter{Marketing Mix}
+\chapter{Marketing Mix}\label{marketing-mix}
 
-\section{Product}
+\section{Product}\label{product}
 
-\subsection{Core Product}
+\subsection{Core Product}\label{core-product}
 
 The problem of the clients is that there is not enough going on at
 comem+. This affects students motivation, promotion and general school
@@ -10,7 +10,7 @@ culture in a negative way. The product tries to solve this problem on
 different levels. It unites the creative potential of students and gives
 the department a voice and with this a stronger identity.
 
-\subsection{Actual Product}
+\subsection{Actual Product}\label{actual-product}
 
 The actual product is the podcast. It is the means to the end of the
 core product and serves its purpose. A podcast is a short (2 minutes) to
@@ -36,7 +36,49 @@ Holistic Marketing & Everything matters & 21st century
 \bottomrule
 \end{longtable}
 
-\subsection{Augmented Product}
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\KeywordTok{public} \KeywordTok{class} \NormalTok{Point2D \{}
+  
+  \DataTypeTok{double} \NormalTok{x;}
+  \DataTypeTok{double} \NormalTok{y;}
+  
+  \KeywordTok{public} \NormalTok{Point2D(}\DataTypeTok{double} \NormalTok{y, }\DataTypeTok{double} \NormalTok{x) \{}
+   \KeywordTok{this}\NormalTok{.}\FunctionTok{x} \NormalTok{= x;}
+   \KeywordTok{this}\NormalTok{.}\FunctionTok{y} \NormalTok{= y;}
+  \NormalTok{\}}
+
+  \KeywordTok{public} \DataTypeTok{static} \DataTypeTok{double} \FunctionTok{rendDistance}\NormalTok{(Point2D pt1, Point2D pt2) \{}
+    
+    \DataTypeTok{double} \NormalTok{distance = }\DecValTok{0}\NormalTok{;}
+    \KeywordTok{if}\NormalTok{( (pt1 != }\KeywordTok{null}\NormalTok{) && (pt2 != }\KeywordTok{null}\NormalTok{) ) \{}
+
+      \DataTypeTok{double} \NormalTok{distX = pt1.}\FunctionTok{rendX}\NormalTok{() - pt2.}\FunctionTok{rendX}\NormalTok{();}
+      \DataTypeTok{double} \NormalTok{distY = pt1.}\FunctionTok{rendY}\NormalTok{() - pt2.}\FunctionTok{rendY}\NormalTok{();}
+      
+
+      \NormalTok{distance = Math.}\FunctionTok{sqrt}\NormalTok{( Math.}\FunctionTok{pow}\NormalTok{(distX, }\DecValTok{2}\NormalTok{) + Math.}\FunctionTok{pow}\NormalTok{(distY, }\DecValTok{2}\NormalTok{));}
+    \NormalTok{\}}
+    
+    \KeywordTok{return} \NormalTok{distance;}
+  \NormalTok{\}}
+
+  
+  \KeywordTok{public} \DataTypeTok{double} \FunctionTok{rendDistanceA}\NormalTok{(Point2D pt2) \{}
+      \KeywordTok{return} \KeywordTok{this}\NormalTok{.}\FunctionTok{rendDistance}\NormalTok{(}\KeywordTok{this}\NormalTok{, pt2);}
+  \NormalTok{\}}
+  \KeywordTok{public} \DataTypeTok{double} \FunctionTok{rendX}\NormalTok{() \{}
+    \KeywordTok{return} \KeywordTok{this}\NormalTok{.}\FunctionTok{x}\NormalTok{;}
+  \NormalTok{\}}
+
+  \KeywordTok{public} \DataTypeTok{double} \FunctionTok{rendY}\NormalTok{() \{}
+    \KeywordTok{return} \KeywordTok{this}\NormalTok{.}\FunctionTok{y}\NormalTok{;}
+  \NormalTok{\}}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Augmented Product}\label{augmented-product}
 
 As the podcasts are produced in a secondary language, students enjoy the
 benefit of improved language skills. This language learning can be
@@ -48,7 +90,7 @@ available for further help.
 Additional values may be created by partnership with other organizations
 like the BALEINEV committee.
 
-\section{Price}
+\section{Price}\label{price}
 
 No money is demanded in exchange for the product. It demands however a
 certain amount of attention and time of the customer. By providing
@@ -74,7 +116,7 @@ also higher when it comes to the demanded attention. Most podcast are
 longer than ten minutes. But also the maximum level of engagement is
 usually some kind of talk-back.
 
-\section{Promotion}
+\section{Promotion}\label{promotion}
 
 The main promotional element is word of mouth promotion. As many
 students come in contact with the project during their studies they
@@ -93,7 +135,7 @@ media engineers (VSMI/ASIM)\footnote{VSMI/ASIM. Association which joins
   graduated media engineers from Switzerland. http://www.vsmi-asim.ch}
 which could help us to reach graduated media engineers.
 
-\section{Place}
+\section{Place}\label{place}
 
 The only distribution channel is the internet. This helps the project
 deliver broadcast at a very low cost and with global reach. Indirect sub
@@ -102,7 +144,7 @@ which is the projects website. This diversification in sub channels
 helps minimizing the risk of being cut off completely from the
 listeners.
 
-\section{Physical Evidence}
+\section{Physical Evidence}\label{physical-evidence}
 
 There is a very tangible part in the project, which are the podcasts.
 But as there are also quite a few service aspects to the project, it
@@ -120,7 +162,7 @@ As for school culture, the project tries to provide a convivial
 environment inside of the CMC by providing sofas and other
 infrastructure for the students to dispose of.
 
-\section{Partners}
+\section{Partners}\label{partners}
 
 The project is completely built on partnerships inside and outside of
 the department. First of all, many of the participants are willing to

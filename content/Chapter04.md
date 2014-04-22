@@ -2,7 +2,7 @@
 ## Product
 ### Core Product
 
-The problem of the clients is that there is not enough going on at comem+. This affects students motivation, promotion and general school culture in a negative way. The product tries to solve this problem on different levels. It unites the creative potential of students and gives the department a voice and with this a stronger identity.
+The problem of the clients is that there is not enough going on at comem+. This affects students motivation, promotion and general school culture in a negative way. The product tries to solve this problem on different levels. It unites the creative potential of students and gives the department a voice and with this a stronger identity. 
 
 ### Actual Product
 The actual product is the podcast. It is the means to the end of the core product and serves its purpose. A podcast is a short (2 minutes) to medium (60 minutes) length audio programme which is delivered through the internet. The contents may vary greatly but are in line with students interests.
@@ -17,7 +17,45 @@ Holistic Marketing	    |	Everything matters 			| 21st century					|
 
 
 
+~~~~~~~~~~~~~~{.java .numberLines}
+public class Point2D {
+  
+  double x;
+  double y;
+  
+  public Point2D(double y, double x) {
+   this.x = x;
+   this.y = y;
+  }
 
+  public static double rendDistance(Point2D pt1, Point2D pt2) {
+    
+    double distance = 0;
+    if( (pt1 != null) && (pt2 != null) ) {
+
+      double distX = pt1.rendX() - pt2.rendX();
+      double distY = pt1.rendY() - pt2.rendY();
+	  
+
+      distance = Math.sqrt( Math.pow(distX, 2) + Math.pow(distY, 2));
+    }
+    
+    return distance;
+  }
+
+  
+  public double rendDistanceA(Point2D pt2) {
+	  return this.rendDistance(this, pt2);
+  }
+  public double rendX() {
+    return this.x;
+  }
+
+  public double rendY() {
+    return this.y;
+  }
+}
+~~~~~~~~~~~~~~~~~~~~
 
 
 ### Augmented Product
