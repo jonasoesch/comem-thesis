@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Classicthesis Typographic Thesis
+% LaTeX Template
+% Version 1.1 (4/8/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% André Miede (http://www.miede.de)
+% 
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% General Tips:
+% 1) Make sure to edit the classicthesis-config.file
+% 2) New enumeration (A., B., C., etc in small caps): \begin{aenumerate} \end{aenumerate}
+% 3) For margin notes: \marginpar or \graffito{}
+% 4) Do not use bold fonts in this style, it is designed around them
+% 5) Use tables as in the examples
+% 6) See classicthesis-preamble.sty for useful commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[
+		oneside,openright,titlepage,numbers=noenddot,headinclude,%1headlines,
+                footinclude=true,cleardoublepage=empty,
+                BCOR=5mm,paper=a4,fontsize=11pt, % Binding correction, paper type and font size
+                ngerman,american, % Languages
+                ]{scrreprt} 
+
+
+                
+% Includes the file which contains all the document configurations and packages - make sure to edit this file
+\input{classicthesis-config}
+
+
+
+%--------Jonas
+
+\usepackage{scrpage2}
+\usepackage{lastpage}
+\usepackage{datetime}
+\clearscrheadfoot
+
+\ihead{\myTitle}
+\ohead[\pagemark]{\thepage\  / \pageref{LastPage} }
+\ifoot{\myName}
+\cfoot{\date{\today} ??}
+\ofoot{\myVersion}
+
+\deftripstyle{jonas}[0pt][0.25pt]{\myTitle}{}{\thepage\  / \pageref{LastPage}}{\myName}{\date{today}}{\myVersion}
+\pagestyle{jonas}
+\renewcommand{\chapterpagestyle}{jonas}
+
+
+\usepackage[multiple]{footmisc}
+\usepackage{tabu}
+
+\usepackage{pdfpages}
+
+\usepackage[style=verbose-trad2,natbib=true,backend=bibtex]{biblatex}
+\addbibresource{Bibliography}
+
+
+\usepackage{longtable}
+
+\begin{document}
+
+
+\frenchspacing % Reduces space after periods to make text more compact
+
+\raggedbottom % Makes all pages the height of the text on that page
+
+\selectlanguage{american} % Select your default language - e.g. american or ngerman
+
+%\renewcommand*{\bibname}{new name} % Uncomment to change the name of the bibliography
+%\setbibpreamble{} % Uncomment to include a preamble to the bibliography - some text before the reference list starts
+
+\pagenumbering{arabic} % Arabic page numbering for thesis content (1, 2, 3, etc)
+
+\pagestyle{scrheadings}
+%\pagestyle{plain} % Suppress headers for the pre-content pages
+
+%----------------------------------------------------------------------------------------
+%	PRE-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+
+\include{frontBack/Titlepage} % Main title page
+
+\setcounter{page}{1} % Uncomment to manually start the page counter at an arbitrary value (for example if you wish to count the pre-content pages in the page count)
+
+\include{frontBack/Titleback} % Back of the title page
+
+%\cleardoublepage\include{frontBack/Dedication} % Dedication page
+%\cleardoublepage\include{frontBack/Foreword} % Uncomment and create a Foreword.tex to include a foreword
+
+\cleardoublepage\include{frontBack/Abstract} % Abstract page
+
+%\cleardoublepage\include{frontBack/Publication} % Publications from the thesis page
+
+\cleardoublepage\include{frontBack/Acknowledgments} % Acknowledgements page
+
+%\pagestyle{scrheadings} % Show chapter titles as headings
+
+\cleardoublepage\include{frontBack/Contents} % Contents, list of figures/tables/listings and acronyms
+
+
+
+
+\cleardoublepage % Avoids problems with pdfbookmark
+
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\ctparttext{You can put some informational part preamble text here. Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se.} % Text on the Part 1 page describing  the content in Part 1
+
+\part{Some Kind of Manual} % First part of the thesis
+
+\include{content/Chapter01} % Chapter 1
+
+\cleardoublepage % Empty page before the start of the next part
+
+%------------------------------------------------
+
+\ctparttext{You can put some informational part preamble text here. Illo principalmente su nos. Non message \emph{occidental} angloromanic da. Debitas effortio simplificate sia se, auxiliar summarios da que, se avantiate publicationes via. Pan in terra summarios, capital interlingua se que. Al via multo esser specimen, campo responder que da. Le usate medical addresses pro, europa origine sanctificate nos se.} % Text on the Part 2 page describing the content in Part 2
+
+\part{The Showcase} % Second part of the thesis
+
+\include{content/Chapter02} % Chapter 2
+\include{content/Chapter03} % Chapter 3
+\include{content/Chapter04} % Chapter 4 - empty template
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\appendix
+
+\part{Appendix} % New part of the thesis for the appendix
+
+\include{content/Chapter0A} % Appendix A
+\include{content/ChapterA1} % Appendix A
+\include{content/ChapterA2} % Appendix A
+%\include{content/Chapter0B} % Appendix B - empty template
+
+%----------------------------------------------------------------------------------------
+%	POST-CONTENT THESIS PAGES
+%----------------------------------------------------------------------------------------
+
+\cleardoublepage\include{frontBack/Bibliography} % Bibliography
+
+\cleardoublepage\include{frontBack/Colophon} % Colophon
+
+\cleardoublepage\include{frontBack/Declaration} % Declaration
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
