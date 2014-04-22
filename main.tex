@@ -47,27 +47,35 @@
 \usepackage{datetime}
 \clearscrheadfoot
 
+% Header and footer
 \ihead{\myTitle}
 \ohead[\pagemark]{\thepage\  / \pageref{LastPage} }
 \ifoot{\myName}
 \cfoot{\date{\today} ??}
 \ofoot{\myVersion}
 
+% Header and footer on title/chapter pages
 \deftripstyle{jonas}[0pt][0.25pt]{\myTitle}{}{\thepage\  / \pageref{LastPage}}{\myName}{\date{today}}{\myVersion}
 \pagestyle{jonas}
 \renewcommand{\chapterpagestyle}{jonas}
 
 
-\usepackage[multiple]{footmisc}
-\usepackage{tabu}
+\usepackage[multiple]{footmisc} %citations as footnotes
+\usepackage{tabu} % better tables
 
+% Include multi-page pdfs
 \usepackage{pdfpages}
 
+% Use biblatex for bibliography (more modern)
 \usepackage[style=verbose-trad2,natbib=true,backend=bibtex]{biblatex}
 \addbibresource{Bibliography}
 
 
-\usepackage{longtable}
+\usepackage{longtable} % tables created by pandoc
+
+% Continuous footnotes
+\usepackage{chngcntr}
+\counterwithout{footnote}{chapter}
 
 \begin{document}
 
